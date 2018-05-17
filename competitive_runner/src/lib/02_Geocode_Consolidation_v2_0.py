@@ -19,12 +19,12 @@ BLK = 15
 # ## Define Input Paths
 
 ## Census Maps
-ed_tract_df = pd.read_csv('../DATA/census_maps.csv')
+ed_tract_df = pd.read_csv('data/census_maps.csv')
 
 
-ACS_FILES_PATH = '../DATA/AFF/acs/'
-CENSUS_FILES_PATH = '../DATA/AFF/census/'
-CITIZENSHIP_FILES_PATH = '../DATA/AFF/citizenship/'
+ACS_FILES_PATH = 'data/AFF/acs/'
+CENSUS_FILES_PATH = 'data/AFF/census/'
+CITIZENSHIP_FILES_PATH = 'data/AFF/citizenship/'
 
 
 # ## Define Standard Functions
@@ -91,7 +91,7 @@ def combine_data_fields(input_df, census_maps, geo_id = 'GEO.id2', cols_to_drop=
 
 INPUT_FILE_PATH_LIST = [ACS_FILES_PATH, CENSUS_FILES_PATH, CITIZENSHIP_FILES_PATH]
 for file_path in INPUT_FILE_PATH_LIST:
-    OUTPUT_FILE_PATH_LIST = '../DATA/ED_AFF/ED_'+'/'.join(file_path.split('/')[-2:])
+    OUTPUT_FILE_PATH_LIST = 'data/ED_AFF/ED_'+'/'.join(file_path.split('/')[-2:])
     #print (OUTPUT_FILE_PATH_LIST)
     if not os.path.exists(OUTPUT_FILE_PATH_LIST):
         os.mkdir(OUTPUT_FILE_PATH_LIST)

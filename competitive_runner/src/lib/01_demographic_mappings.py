@@ -14,8 +14,8 @@ import sys
 import os
 
 
-FIPS_PATH = '../DATA/Fips_Files/'
-CENSUS_MAPS_PATH = '../DATA/census_maps.csv'
+FIPS_PATH = 'data/Fips_Files/'
+CENSUS_MAPS_PATH = 'data/census_maps.csv'
 
 
 # # Data

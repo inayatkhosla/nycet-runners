@@ -6,4 +6,4 @@ COPY requirements.txt /src/
 RUN pip install -r requirements.txt
 COPY /src/ /src/
 
-CMD python execute.py $PASSWORD
+CMD python $FILE_NAME $PASSWORD

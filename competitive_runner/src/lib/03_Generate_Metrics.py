@@ -21,7 +21,7 @@ class GenerateVoterFile():
         self.get_pcts()
 
     def read_data(self):
-        self.vfile = pd.read_table('../DATA/VOTER_FILE/' + os.listdir('../DATA/VOTER_FILE/')[1])
+        self.vfile = pd.read_table('data/VOTER_FILE/' + os.listdir('data/VOTER_FILE/')[1])
         self.vfile = self.vfile.rename(columns = {'Voter File VANID': 'VANID'})
         self.vfile = self.vfile[self.vfile['RegistrationStatusName'].apply(lambda x: x in ['Registered Active', 'Registered Inactive'])]
 
@@ -242,9 +242,9 @@ class GenerateDemoMetrics():
         self.census_df = pd.DataFrame()
         for path in self.file_mapping:
             temp_df = pd.DataFrame()
-            for new_path in os.listdir('../DATA/ED_AFF/ED_census/'):
+            for new_path in os.listdir('data/ED_AFF/ED_census/'):
                 if path in new_path:
-                    temp_df = temp_df.append(pd.read_csv('../DATA/ED_AFF/ED_census/' + new_path))
+                    temp_df = temp_df.append(pd.read_csv('data/ED_AFF/ED_census/' + new_path))
             temp_df = temp_df.reset_index()
 
             acs_type = self.file_mapping[path]
@@ -310,8 +310,8 @@ class RunDBMappings():
         self.years = years
         self.password = password
         self.vfile = GenerateVoterFile(self.years)
-        self.acs = GenerateDemoMetrics(self.vfile, '../DATA/ED_AFF/ED_acs/', years, acs = True)
-        self.census = GenerateDemoMetrics(self.vfile, '../DATA/ED_AFF/ED_census/', years, acs = False)
+        self.acs = GenerateDemoMetrics(self.vfile, 'data/ED_AFF/ED_acs/', years, acs = True)
+        self.census = GenerateDemoMetrics(self.vfile, 'data/ED_AFF/ED_census/', years, acs = False)
         self.upload_to_db()
 
     def to_pg(self, df, table_name, con):
