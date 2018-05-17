@@ -1,4 +1,4 @@
-# New York Civic Engagement Table analysis: Run Scripts
+# New York Civic Engagement Table Analysis: Run Scripts
 
 ## INSTRUCTIONS
 
