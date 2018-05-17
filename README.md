@@ -1,6 +1,8 @@
 # New York Civic Engagement Table analysis: Run Scripts
 
 ## INSTRUCTIONS
+
+### Experiments
 1. Install Docker
     - Mac: https://docs.docker.com/docker-for-mac/install
     - Windows: https://docs.docker.com/docker-for-windows/install
@@ -22,3 +24,5 @@ Once above steps are done...
 4. Run these commands in a terminal:
     - docker build . -t nycet
     - docker run -t -e PASSWORD=type-password-here nycet
+
+### Competitive Districts
