@@ -33,11 +33,11 @@ Once above steps are done...
     - Windows: https://docs.docker.com/docker-for-windows/install
 
 #### To calculate competitive metrics
-Run these commands in a terminal:
+5. Run these commands in a terminal:
     - docker build . -t nycet-comp
     - docker run -t -e PASSWORD=type-password-here -e FILE_NAME=comp_generator.py nycet-comp
 
 #### To generate demographic metrics
-Run these commands in a terminal:
+5. Run these commands in a terminal:
     - docker build . -t nycet-demo
     - docker run -t -e PASSWORD=type-password-here -e FILE_NAME=demo_generator.py nycet-demo
