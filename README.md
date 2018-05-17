@@ -24,8 +24,8 @@ Once above steps are done...
 
 ### To generate demographic metrics
 5. Run these commands in a terminal:
-    - docker build . -t nycet
-    - docker run -t -e PASSWORD=type-password-here nycet
+    - docker build . -t nycet-exp
+    - docker run -t -e PASSWORD=type-password-here nycet-exp
 
 ## Competitive Districts
 
@@ -43,5 +43,5 @@ Once above steps are done...
 ### To generate demographic metrics
 3. ?
 4. Run these commands in a terminal:
-    - docker build . -t nycet-demo
-    - docker run -t -e PASSWORD=type-password-here -e FILE_NAME=demo_generator.py nycet-demo
+    - docker build . -t nycet-comp
+    - docker run -t -e PASSWORD=type-password-here -e FILE_NAME=demo_generator.py nycet-comp
