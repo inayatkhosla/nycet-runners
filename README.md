@@ -2,7 +2,7 @@
 
 ## INSTRUCTIONS
 
-### Experiments
+## Experiments
 1. Install Docker
     - Mac: https://docs.docker.com/docker-for-mac/install
     - Windows: https://docs.docker.com/docker-for-windows/install
@@ -22,22 +22,26 @@
    
 Once above steps are done...
 
+### To generate demographic metrics
 5. Run these commands in a terminal:
     - docker build . -t nycet
     - docker run -t -e PASSWORD=type-password-here nycet
 
-### Competitive Districts
+## Competitive Districts
 
 1. Install Docker
     - Mac: https://docs.docker.com/docker-for-mac/install
     - Windows: https://docs.docker.com/docker-for-windows/install
+2. Run Docker on your computer
 
-#### To calculate competitive metrics
-5. Run these commands in a terminal:
+### To calculate competitive metrics
+3. ?
+4. Run these commands in a terminal:
     - docker build . -t nycet-comp
     - docker run -t -e PASSWORD=type-password-here -e FILE_NAME=comp_generator.py nycet-comp
 
-#### To generate demographic metrics
-5. Run these commands in a terminal:
+### To generate demographic metrics
+3. ?
+4. Run these commands in a terminal:
     - docker build . -t nycet-demo
     - docker run -t -e PASSWORD=type-password-here -e FILE_NAME=demo_generator.py nycet-demo
