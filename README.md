@@ -3,12 +3,13 @@
 ## INSTRUCTIONS
 
 ## Experiments
+**May take a few hours to run.**
 
 1. Install Docker
     - Mac: https://docs.docker.com/docker-for-mac/install
     - Windows: https://docs.docker.com/docker-for-windows/install
 2. Run Docker on your computer
-3. Open Docker>Preferences>Advanced and change Memory to 5.0GiB or higher
+3. Open Docker>Preferences>Advanced and change Memory to +15.0GiB and max Swap due to voter file size
 
 ### To determine experiment results
 3. Add new experiments to the experiments table in the ny database
