@@ -65,7 +65,7 @@ class ExperimentByVoterFormatter():
         return combined_w_info
 
     def combine_all_experiment_results(self):
-        self.all_experiments = pd.concat(self.experiment_dfs).fillna(0)
+        self.all_experiments = pd.concat(self.experiment_dfs, sort=False).fillna(0)
 
     def merge_all_exps_w_persons(self):
         self.persons['vanid'] = self.persons.vanid.astype(float).astype('int64')
