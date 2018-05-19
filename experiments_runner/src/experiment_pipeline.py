@@ -65,6 +65,7 @@ class ExperimentPipeline():
         print('2/5 Started generating experiment by voter file.')
         ebvf = ExperimentByVoterFormatter(self.election_dates, self.contact_types, etp)
         ebvf.run()
+        del etp.experiments, etp.contact_history, etp.persons
         print('2/5 Finished.')
 
         print('3/5 Started calculating CACE metrics.')
